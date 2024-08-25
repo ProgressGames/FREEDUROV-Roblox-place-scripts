@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арест Павла Дурова во Франции</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .caption {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .link {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #clocks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<div id="clocks">
+    <span id="paris-time"></span> (Париж) | <span id="msk-time"></span> (МСК)
+</div>
+
+<div class="container">
+    <h1>Арест Павла Дурова во Франции</h1>
+    <p>Хотите поиграть в плейс, посвященный этим событиям? <a href="https://www.roblox.com/share?code=2326de6dc3e4ad42bfec0e1f726799fd&type=ExperienceDetails&stamp=1724605930990" class="link">Перейдите по ссылке и окунитесь в игровой мир!</a></p>
+
+    <p>Павел Дуров, основатель мессенджера Telegram и социальной сети «ВКонтакте», был арестован во Франции 24 августа 2024 года. Это событие вызвало широкий общественный резонанс и подняло ряд вопросов о свободе информации и правах личности.</p>
+
+    <h2>Обстоятельства ареста</h2>
+    <p>Павел Дуров был задержан в <a href="https://www.google.com/maps/place/A%C3%A9roport+Paris-Le+Bourget/@48.9691111,2.4441667,15z/data=!4m53m41s0x47e66e4a5a5a5a5a:0x8f9b8a5a5a5a5a5a8m23d48.96911114d2.4441667" class="link">аэропорту Ле-Бурже в Париже</a>, куда он прибыл на частном самолете из Азербайджана. Дуров планировал провести в Париже бизнес-встречу.</p>
+
+    <img class="image" src="https://i.pinimg.com/736x/93/4c/c2/934cc2cdf0cefa8173c6fc4f8b176b21.jpg" alt="Павел Дуров">
+    <p class="caption">Павел Дуров</p>
+
+    <h2>Причины ареста</h2>
+    <p>Дуров обвиняется в отказе сотрудничать с французскими властями и модерировать контент Telegram. Французские власти считают, что мессенджер использовался для совершения тяжких преступлений, включая терроризм, торговлю наркотиками, мошенничество и отмывание денег.</p>
+
+    <h2>Реакция российских властей</h2>
+    <p>Посольство России во Франции потребовало от местных властей разъяснить обоснования задержания Дурова и обеспечить защиту его прав. Однако французская сторона уклоняется от взаимодействия по этому вопросу.</p>
+
+    <img class="image" src="https://i.pinimg.com/736x/d6/1a/82/d61a8274ee148054b880517db88e40d9.jpg" alt="Павел Дуров за границей">
+    <p class="caption">Павел Дуров за границей</p>
+
+    <h2>Политический контекст</h2>
+    <p>Арест Дурова рассматривается многими как политически мотивированное действие. Вице-спикер Госдумы Владислав Даванков заявил, что арест может быть инструментом для получения доступа к личной информации пользователей Telegram.</p>
+
+    <p>Этот инцидент поднимает важные вопросы о балансе между свободой информации и необходимостью модерировать контент в цифровых платформах.</p>
+</div>
+
+<script>
+    function updateClock() {
+        const parisOffset = -1 * 60 * 60 * 1000; // Париж на 1 час отстаёт от МСК летом
+        const mskOffset = 0; // МСК
+
+        const now = new Date();
+        const parisTime = new Date(now.getTime() + parisOffset);
+        const mskTime = new Date(now.getTime() + mskOffset);
+
+        document.getElementById('paris-time').innerText = parisTime.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('msk-time').innerText = mskTime.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000); // Обновлять часы каждую секунду
+</script>
+
+</body>
+</html>
